@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>EJS</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <% if(weather !== null){ %>
+          <p><%= weather %></p>
+        <% } %>
+
+        <% if(sunrise !== null){ %>
+          <p><%= sunrise %></p>
+        <% } %>
+
+        <% if(sunset !== null){ %>
+          <p><%= sunset %></p>
+        <% } %>
+
+        <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+
+        <form action="/" method="get">
+            <input type="submit" class="ghost-button" value="Nazad">
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>
